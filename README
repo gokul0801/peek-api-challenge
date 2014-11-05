@@ -1,0 +1,57 @@
+The Peek API Challenge has been implemented in Python and Django Rest Framework.
+To test:
+1) Copy the git code 
+2)  'python manage.py runserver' 
+3)  API can be accessed as 
+
+For timeslots POST & GET:
+ localhost:8000/api/timeslots
+
+GET for specific date
+ localhost:8000/api/timeslots?date=<date>
+ example  localhost:8000/api/timeslots?date=2014-07-22   
+
+   
+ localhost:8000/api/boats
+ localhost:8000/api/assignments
+ localhost:8000/api/bookings
+ 
+
+Sample Output:
+http://localhost:8000/api/timeslots?date=2014-07-22
+
+[
+    {
+        "id": "tslot9", 
+        "start_time": 1406052000, 
+        "duration": 120, 
+        "availability": 4, 
+        "customer_count": 0, 
+        "boats": [
+            "boat5", 
+            "boat6"
+        ]
+    }, 
+    {
+        "id": "tslot10", 
+        "start_time": 1406055600, 
+        "duration": 120, 
+        "availability": 6, 
+        "customer_count": 2, 
+        "boats": [
+            "boat5"
+        ]
+    }
+] 
+
+POST  http://localhost:8000/api/timeslots
+POST irequest  can be given in JSON format in the web form as:
+     {"start_time": 1406052000, "duration": 120}
+
+
+POST request for boats can be given as:
+     {"name": "Amazon Express", "size": 8}
+
+ 
+
+
