@@ -75,7 +75,8 @@ def assignments(req):
         return Response("Boat%s is already assigned to timeslot tslot%s" % (boat.id, timeslot.id), status=status.HTTP_400_BAD_REQUEST)
 	
 
-
+# When doing a booking, check to see if there are other timeslots, using the same boat. Update availability on those
+# timeslots if there is any overlap.
 @api_view(['POST'])
 def bookings(req):
   if req.method == 'POST':
