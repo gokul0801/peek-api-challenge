@@ -1,4 +1,5 @@
-The Peek API Challenge has been implemented in Python and Django Rest Framework.
+The Peek API Challenge has been implemented in Python, Django and django Rest Framework.
+
 To test:
 1) Copy the git code 
 2)  'python manage.py runserver' 
@@ -53,5 +54,7 @@ POST request for boats can be given as:
      {"name": "Amazon Express", "size": 8}
 
  
+ The database used is sqlite3 for the demo.
+ For production, i would use Mysql to better handle scalability. 
 
 
